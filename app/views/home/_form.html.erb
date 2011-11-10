@@ -1,0 +1,8 @@
+<%= form_tag home_perfil_path, :method => 'get',:id => "posting" do %>
+  <p>
+    <%= text_area_tag "contenido"%>
+
+    <%= submit_tag "postear", :name => nil %>
+  </p>
+<% end %>
+

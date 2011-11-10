@@ -1,0 +1,3 @@
+<% unless @posts.empty? %>
+$('#posteos').append("<%= escape_javascript(raw render(@posts))%>"); 
+<%end%>

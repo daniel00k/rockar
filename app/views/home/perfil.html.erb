@@ -1,0 +1,20 @@
+<%= render "form" %>
+<div id="usuario" data-id="<%= current_user.id %>">debajo van los posts
+<div id="posteos" >
+<%= render current_user.posts %> 
+</div>
+</div>
+----------------------cuando haces click en uno de los posts(63 y el ultimo tienen comentarios)abajo de esta linea salen sus comentarios...si no tienen comentarios no sale nada----------------------------------------------------
+<div id="comentarios">
+<%if $current_post%>
+<%=render $current_post.comentarios%>
+<%end%>
+</div>
+<%= form_tag home_perfil_path, :method => 'get',:id => "comenting" do %>
+  <p>
+    <%= text_area_tag :content%>
+
+    <%= submit_tag "comentar", :name => nil %>
+  </p>
+<% end %>
+
